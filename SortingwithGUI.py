@@ -4,6 +4,9 @@ import numpy as np
 import time
 
 
+// QUICK SORT TO BE ADDED
+
+
 
 def show(n: int, data: list, colours: list):
 
@@ -101,45 +104,45 @@ def mergesort(arr, left, right):
 				j += 1
 
 # Function to find the partition position
-def partition(arr, low, high):
-  
-  # Choose the rightmost element as pivot
-  pivot = arr[high]
+#def partition(arr, low, high):
+ # 
+  ## Choose the rightmost element as pivot
+  #pivot = arr[high]
   
   # Pointer for greater element
-  i = low - 1
+  #i = low - 1
   
   # Traverse through all elements
   # compare each element with pivot
-  for j in range(low, high):
-    if arr[j] <= pivot:
+  #for j in range(low, high):
+   # if arr[j] <= pivot:
       # If element smaller than pivot is found
       # swap it with the greater element pointed by i
-      i = i + 1
+    #  i = i + 1
   
       # Swapping element at i with element at j
-      (arr[i], arr[j]) = (arr[j], arr[i])
+     # (arr[i], arr[j]) = (arr[j], arr[i])
   
   # Swap the pivot element with the greater element specified by i
-  (arr[i + 1], arr[high]) = (arr[high], arr[i + 1])
+  #(arr[i + 1], arr[high]) = (arr[high], arr[i + 1])
   
   # Return the position from where partition is done
-  return i + 1
+  #return i + 1
   
 # Function to perform quicksort
-def quick_sort(arr, low, high):
-  if low < high:
+#def quick_sort(arr, low, high):
+ #if low < high:
   
     # Find pivot element such that
     # element smaller than pivot are on the left
     # element greater than pivot are on the right
-    pi = partition(arr, low, high)
+ #   pi = partition(arr, low, high)
   
     # Recursive call on the left of pivot
-    quick_sort(arr, low, pi - 1)
+  #  quick_sort(arr, low, pi - 1)
   
     # Recursive call on the right of pivot
-    quick_sort(arr, pi + 1, high)
+   # quick_sort(arr, pi + 1, high)
 
 
 # this function call the mergesort function which will
